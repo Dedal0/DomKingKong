@@ -1,0 +1,30 @@
+Edit /etc/apache2/sites-available/default
+
+Change line 16 from this:
+
+ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin/">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+
+to this :
+
+	ScriptAlias /cgi-bin/ /var/www/cgi-bin/
+	<Directory "/var/www/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+		AddHandler cgi-script .py
+		AddHandler default-handler .html .htm
+	</Directory>
+
+Start or re-start apache.
+
+Save domkingkong.py in /var/www/cgi-bin
+
+Save dom.html in /var/www
