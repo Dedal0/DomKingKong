@@ -33,7 +33,11 @@ print ""
 
 print '''
 <html>
-<body bgcolor="Black">'''
+<head>
+    <title>Dom King Kong - Beta - Dom Auditing T00l</title>
+    <link href="files/style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>'''
 
 #Obtener Criticos
 def criticos(patron,html):
