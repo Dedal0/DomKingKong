@@ -33,12 +33,24 @@ print ""
 
 print '''
 <html>
-<body bgcolor="Black">'''
+<style>
+a {
+  text-decoration: none;
+  font-weight: 900;
+  color: #ecf0f1;
+}
+
+a:hover {
+  color: #bdc3c7;
+}
+</style>
+<title>Dom King Kong - Dom Auditing Tool</title>
+<body style="background-color: #2c3e50">'''
 
 #Obtener Criticos
 def criticos(patron,html):
 	print "<h2 style=\"color:white\">Attack Vector:</h2> <br />"
-	print "<textarea style=\"margin: 2px; width: 906px; height: 506px; color: green; background-color: black;\">"
+	print "<textarea style=\"margin: 2px; width: 906px; height: 506px; color: white; background-color: #2980b9;\">"
 	d = 0;
 	for line in html:
 		d = d + 1
@@ -57,7 +69,7 @@ def jss(patron,html,dominio):
 			scripts.append(script)
 	#print "<textarea style=\"margin: 2px; width: 566px; height: 211px;\">"
 	for script in scripts:
-		print "[+] <a href=\"domkingkong.py?url=http://" + dominio + "/" + script + "\">JS</a><br />"
+		print "<font color=\"white\"[+]</font> <a href=\"domkingkong.py?url=http://" + dominio + "/" + script + "\">JS</a><br />"
 
 	#print "</textarea>"
 
@@ -65,7 +77,7 @@ def jss(patron,html,dominio):
 def all_html(html):
 	c = 0
 	print "<h2 style=\"color:white\">Web Page Source Code</h2>"
-	print "<textarea style=\"margin: 2px; width: 906px; height: 506px; color: green; background-color: black;\">"	
+	print "<textarea style=\"margin: 2px; width: 906px; height: 506px; color: white; background-color: #2980b9;\">"	
 	for linea in html:
 		c = c + 1
 		print str(c) + linea
