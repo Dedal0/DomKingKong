@@ -33,20 +33,12 @@ print ""
 
 print '''
 <html>
-<head>
-    <title>Dom King Kong - Beta - Dom Auditing T00l</title>
-    <link href="files/style.css" media="screen" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="files/scripts/shCore.js"></script>
-	<script type="text/javascript" src="files/scripts/shBrushJScript.js"></script>
-	<link type="text/css" rel="stylesheet" href="files/shCoreDefault.css"/>
-	<script type="text/javascript">SyntaxHighlighter.all();</script>
-</head>
-<body>'''
+<body bgcolor="Black">'''
 
 #Obtener Criticos
 def criticos(patron,html):
 	print "<h2 style=\"color:white\">Attack Vector:</h2> <br />"
-	print "<textarea class=\"js\" style=\"margin: 2px; width: 906px; height: 506px;\">"
+	print "<textarea style=\"margin: 2px; width: 906px; height: 506px; color: green; background-color: black;\">"
 	d = 0;
 	for line in html:
 		d = d + 1
@@ -73,7 +65,7 @@ def jss(patron,html,dominio):
 def all_html(html):
 	c = 0
 	print "<h2 style=\"color:white\">Web Page Source Code</h2>"
-	print "<textarea class=\"js\" style=\"margin: 2px; width: 906px; height: 506px;\">"	
+	print "<textarea style=\"margin: 2px; width: 906px; height: 506px; color: green; background-color: black;\">"	
 	for linea in html:
 		c = c + 1
 		print str(c) + linea
