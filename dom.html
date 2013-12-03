@@ -1,24 +1,38 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+function about(){
 
-<head>
-    <title>Dom King Kong - Beta - Dom Auditing T00l</title>
-    <link href="files/style.css" media="screen" rel="stylesheet" type="text/css" />
-</head>
+document.getElementById('texto').innerHTML = "<br /><br /><br /><br /><br /><br /><br /><br />Dom King Kong es una herramienta desarrollada por Camilo Galdos Co-Founder del grupo de researching FailHunters. Dom King Kong está desarrollado en python. Dom King Kong es de libre uso y cualquiera puede descargarlo y usarlo. Su función principal es la de auditar el uso del DOM del navegador en Páginas web para buscar fallas de seguridad del tipo Cross Site Scripting."
 
-<body>
+}
+</script>
+<!--DomKingKong [BETA] es una tool desarrollada por FailHunters (FailHunters.Com)-->
+<html><head><title>Dom King Kong - Beta - Dom Auditing T00l</title>
+
+
+    
+    <link href="files/style.css" media="screen" rel="stylesheet" type="text/css"></head><body>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <center>
-    <div class='container'>
-            <div class='form'>
-                <form name='myform' action='./cgi-bin/domkingkong.py' method='GET'>
-                  <input name='url' type='text' value='http://' />
-                    <input type='submit' value='Submit' />
+    <div class="container">
+            <div class="form">
+                <form name="myform" action="./cgi-bin/domkingkong.py" method="get">
+                  <input name="url" value="http://" type="text">
+                    <input value="Submit" type="submit">
                 </form>
+		<a href="#" onclick="about();">About</a>
             </div>
-            <h2 style="color:White;">Dom King Kong [BETA] - Dom Auditing T00l</h2>
+
+<div id="texto">
+<h2 style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;">Dom King Kong [BETA]</h2>
+<h2 style="font-family: Helvetica,Arial,sans-serif; font-weight: bold;"><small style="color: black;"><small>FailHunters </small></small><br>
+</h2>
+</div>
+<br>
+<br>
+
   </div>
 </center>
-</body>
-
-</html>
+</body></html>
